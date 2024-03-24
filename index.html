@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1 class="temp__title">Температура в разных городах</h1>
+
+      <form class="temp__form" action="/cats">
+        <label class="temp__label" for="temp-degree"></label>
+        <input class="temp__degree" type="number" name="temp-degree" />
+        <button class="temp__button" type="button">Загрузить данные</button>
+      </form>
+
+      <div class="temp__list"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
