@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      numbers = [];
+      for (let i = -10; i < 11; i++) {
+        numbers.push(i);
+      }
+      console.log(numbers);
+
+      numbers = numbers.filter((n) => {
+        return n >= 0;
+      });
+      console.log(numbers);
+
+      for (i of numbers) {
+        numbers[i] = numbers[i] ** 2;
+      }
+      console.log(numbers);
+
+      for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < numbers.length - i - 1; j++) {
+          if (numbers[j] < numbers[j + 1]) {
+            let n = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = n;
+          }
+        }
+      }
+      console.log(numbers);
+    </script>
+  </body>
+</html>
