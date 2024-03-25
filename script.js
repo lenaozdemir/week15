@@ -20,6 +20,23 @@ for (city of cities) {
   temperatures.push(temperature);
 }
 
+for (let i = 0; i < cities.length; i++) {
+  const listItem = document.createElement("div");
+  listItem.textContent = `${cities[i]}: ${temperatures[i]}°C`;
+  list.appendChild(listItem);
+}
+
+const maxTemp = Math.max(...temperatures);
+const minTemp = Math.min(...temperatures);
+
+const maxT = document.createElement("p");
+maxT.textContent = `Максимальная температура: ${maxTemp}°C`;
+list.appendChild(maxT);
+
+const minT = document.createElement("p");
+minT.textContent = `Минимальная температура: ${minTemp}°C`;
+list.appendChild(minT);
+
 //попытки сделать все через инпут
 
 // label.textContent = `Введите температуру для города: ${cities[0]}`;
